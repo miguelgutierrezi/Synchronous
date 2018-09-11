@@ -1,0 +1,8 @@
+{
+  "name": "SynchronousRestAuth",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular",
+  "pro_id": "072a8b7c"
+}
