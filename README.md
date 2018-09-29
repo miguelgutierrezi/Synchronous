@@ -14,10 +14,8 @@ If you want to know more about Ionic Framework, here is their documentation link
 
 ## ApiRest
 
-To running this part you should use this command
-```
-python manage.py runserver
-```
+To running this part you should use this command ```python manage.py runserver```
+
 Then, the app will show you the port where the app is running, after you know it you should type this in your browser ```localhost:portnumber``` or you can use this command ```127.0.0.1:portnumber```
 
 If you want to know more about Django Rest Framework, here is their documentation link [Django Doc](http://www.django-rest-framework.org/)
