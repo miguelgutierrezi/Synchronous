@@ -1,5 +1,7 @@
 # Synchronous
 
+![Synchronous](Synchronous.png)
+
 Welcome to the Repository of **keep U Up by Synchronous** project.
 
 After download or clone the currente repository you will find two principal folders. The one that is call *SynchronousRestAuth* is the one that represents the project's frontend. This was developed with **Ionic framework** and Typescript as it programming language. In second place you will find a folder with *ApiRest* as their name, this one have the backend development. We used **Django Rets Framework** and Python3 for this part.
