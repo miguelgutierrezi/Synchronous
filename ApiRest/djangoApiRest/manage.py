@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-#manage.py hola
+#manage.py
 import os
 import sys
 
