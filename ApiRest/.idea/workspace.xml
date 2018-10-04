@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="34a8429f-b3de-4af3-9f8f-b98cc675b71e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/djangoApiRest/quickBackend/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/djangoApiRest/quickBackend/models.py" afterDir="false" />
-    </list>
+    <list default="true" id="34a8429f-b3de-4af3-9f8f-b98cc675b71e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,8 +103,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/djangoApiRest/quickBackend/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding>
                 <marker date="1538664616800" expanded="true" signature="87:88" ph="..." />
                 <marker date="1538664616800" expanded="true" signature="87:92" ph="..." />
@@ -193,13 +190,6 @@
               <item name="ApiRest" type="462c0819:PsiDirectoryNode" />
               <item name="djangoApiRest" type="462c0819:PsiDirectoryNode" />
               <item name="quickBackend" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ApiRest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ApiRest" type="462c0819:PsiDirectoryNode" />
-              <item name="djangoApiRest" type="462c0819:PsiDirectoryNode" />
-              <item name="quickBackend" type="462c0819:PsiDirectoryNode" />
-              <item name="migrations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -332,8 +322,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/djangoApiRest/quickBackend/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="true" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
           <folding>
             <marker date="1538664616800" expanded="true" signature="87:88" ph="..." />
             <marker date="1538664616800" expanded="true" signature="87:92" ph="..." />
