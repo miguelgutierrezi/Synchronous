@@ -29,3 +29,6 @@ class Activity(models.Model):
     date = models.DateField()
     value = models.FloatField(default=1)
     grade = models.FloatField(default=1)
+
+    def __str__(self):
+        return self.name
