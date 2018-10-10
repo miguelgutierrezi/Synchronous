@@ -23,3 +23,9 @@ class Student(models.Model):
 
     def __str__(self):
         return self.correo
+
+class Activity(models.Model):
+    name = models.CharField(max_length=100)
+    date = models.DateField()
+    value = models.FloatField(default=1)
+    grade = models.FloatField(default=1)
