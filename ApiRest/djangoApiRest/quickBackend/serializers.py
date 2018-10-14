@@ -7,7 +7,7 @@ from .models import Subject
 from .models import Activity
 
 
-class SubjectSerializer(serializers.HyperlinkedModelSerializer):
+class SubjectSerializer(serializers.ModelSerializer):
     activities = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
 
     class Meta:
