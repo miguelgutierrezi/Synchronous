@@ -1,23 +1,21 @@
-from rest_framework import generics
+from rest_framework import viewsets
 from .models import Subject
-from .serializers import SubjectSerializer
 from .models import Activity
+from .serializers import SubjectSerializer
 from .serializers import ActivitySerializer
 
 
 # Create your views here.
 
-class ListSubject(generics.ListCreateAPIView):
-    queryset = Subject.objects.all()
-    serializer_class = SubjectSerializer
+class SubjectViewSet(viewsets.ModelViewSet):
+	queryset = Subject.objects.all()
+	serializer_class = SubjectSerializer
+	lookup_field = 'name'
 
-
-class DetailSubject(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Subject.objects.all()
-    serializer_class = SubjectSerializer
-
-class ListActivity(generics.ListCreateAPIView):
+class ActivityViewSet(viewsets.ModelViewSet):
 	queryset = Activity.objects.all()
 	serializer_class = ActivitySerializer
-	
+	lookup_field = 'id'
+
+		
 		
