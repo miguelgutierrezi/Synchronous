@@ -1,31 +1,20 @@
 page-welcome {
   .splash-bg {
-    position: relative;
-    background: url('../assets/img/splashbg.png') no-repeat transparent;
-    background-size: cover;
-    height: 45%;
-    z-index: 1;
-    background-repeat: repeat-x;
-    animation: animatedBackground 40s linear infinite;
+    position: absolute;
+    top: 10%;
+    background: url('../assets/imgs/Synchronous.png') no-repeat transparent;
   }
 
   @keyframes animatedBackground {
     from { background-position: 0 0; }
     to { background-position: 100% 0; }
   }
-
-  .splash-info {
-    position: relative;
-    z-index: 2;
-    margin-top: -64px;
-    text-align: center;
-  }
   .splash-logo {
     margin: auto;
-    background: url('../assets/img/appicon.png') repeat transparent;
+    background: url('../assets/imgs/Synchronous.png') repeat transparent;
     background-size: 100%;
-    width: 128px;
-    height: 128px;
+    width: 328px;
+    height: 328px;
   }
   .splash-intro {
     font-size: 18px;
