@@ -1,5 +1,5 @@
 @echo off
-set "VIRTUAL_ENV=C:\Users\Miguel\Documents\GitHub\Synchronous\ApiRest\rest"
+set "VIRTUAL_ENV=C:\Users\migue\OneDrive\Documentos\GitHub\Synchronous\ApiRest\rest"
 
 if defined _OLD_VIRTUAL_PROMPT (
     set "PROMPT=%_OLD_VIRTUAL_PROMPT%"
