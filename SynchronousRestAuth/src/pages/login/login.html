@@ -1,19 +1,20 @@
-  <nav class="bar">
+  <ion-navbar class="bar">
     <img src="assets/imgs/Synchronous.png" class="logo">
-  </nav>
+  </ion-navbar>
 <div class="fondo">
   <div class="jumbotron" style="height: 300px; width: 400px; position: relative;left: 12cm; top: 2cm ">
   <form (ngSubmit)="doLogin()">
     <ion-title style="width:6cm; position:relative; left: 2.5cm;">{{ 'LOGIN_TITLE' | translate }}</ion-title> 
-    <div class="form-group">
-      <label>Email</label>
-      <input type="email" [(ngModel)]="account.email"  class="form-control" name="email" placeholder="Enter email">
-     </div>
-    <div class="form-group">
-      <label>Password</label>
-      <input type="password" class="form-control" [(ngModel)]="account.password" name="password" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary" >LogIn</button>
+    <ion-item>
+        <ion-label fixed>Username</ion-label>
+        <ion-input type="text" value="" [(ngModel)]="account.email" name="email" placeholder="Enter email"></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label fixed>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="account.password" name="password" placeholder="Password"></ion-input>
+      </ion-item>
+    <button ion-button type="submit" >LogIn</button>
   </form>
   </div>
 </div>
