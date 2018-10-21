@@ -8,14 +8,14 @@ export class Materia {
     starTime;
     endTime;
  
-    constructor(public nombre:string, public codigo:number, public profesor:string, public creditos:number, public descripcion:string, public starTime:string, public endTime:string){
-        this.nombre = nombre;
-        this.codigo = codigo;
-        this.profesor = profesor;
-        this.creditos =creditos;
-        this.descripcion = descripcion;
-        this.starTime = starTime;
-        this.endTime = endTime;
+    constructor(public nom, public cod, public prof, public cred, public des, public star, public end){
+        this.nombre = nom;
+        this.codigo = cod;
+        this.profesor = prof;
+        this.creditos =cred;
+        this.descripcion = des;
+        this.starTime = star;
+        this.endTime = end;
     }
 
  

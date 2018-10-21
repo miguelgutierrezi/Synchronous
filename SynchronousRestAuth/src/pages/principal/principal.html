@@ -35,19 +35,17 @@
         </div>
       </nav>
     
-      <table class="table">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">Codigo</th>
+      <table class="table table-sm">
+          <tr *ngFor="let person of materiasInscritas" class="table-secondary">
+            <th scope="col" >Codigo</th>
             <th scope="col">Nombre</th>
             <th scope="col">Creditos</th>
           </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td *ngFor="let person of materiasInscritas">{{person.codigo}}</td>
+          <tr *ngFor="let person of materiasInscritas" class="bg-success">
+            <th scope="col" >{{person.codigo}}</th>
+            <th scope="col">{{person.nombre}}</th>
+            <th scope="col">{{person.creditos}}</th>
           </tr>
-        </tbody>
       </table>
     </div>
     
