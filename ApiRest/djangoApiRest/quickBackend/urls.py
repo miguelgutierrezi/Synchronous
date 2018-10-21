@@ -13,8 +13,6 @@ router.register(r'activities', views.ActivityViewSet)
 urlpatterns = [
 
     path('', include(router.urls)),
-    path('', views.ListSubject.as_view()),
-    path('<int:pk>/', views.DetailSubject.as_view()),
     path('student/', views.ListStudent.as_view()),
     path('student/<str:mail>/', views.prueba, name='mail')
 ]
