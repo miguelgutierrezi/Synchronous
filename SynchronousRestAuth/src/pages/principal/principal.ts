@@ -18,7 +18,7 @@ import { Materia } from '../../models/materia';
 })
 export class PrincipalPage {
 
-  public materiasInscritas:Materia = [];
+  public materiasInscritas = [];
 
   constructor(public navCtrl: NavController,public user: User, public navParams: NavParams,public loadingCtrl: LoadingController) {
     this.materiasInscritas.push(new Materia("Proweb",1232,"huyui",3,"ghjk","qwqa","axqw"));
