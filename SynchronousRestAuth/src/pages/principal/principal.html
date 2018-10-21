@@ -1,0 +1,51 @@
+<ion-header>
+</ion-header>
+    
+    
+    <div>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Materias
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#/materia">Agregar Materia</a>
+                <a class="dropdown-item" href="#/principal">Materias Inscritas</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#/actividades" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Actividades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#/actividades">Actividades</a>
+                <a class="dropdown-item" href="#/actividad">Agregar Actividad</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#/principal">Horario</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" (ngSubmit)="doLogout()">
+            <button ion-button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar Sesion</button>
+          </form>
+        </div>
+      </nav>
+    
+      <table class="table table-sm">
+          <tr *ngFor="let person of materiasInscritas" class="table-secondary">
+            <th scope="col" >Codigo</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Creditos</th>
+          </tr>
+          <tr *ngFor="let person of materiasInscritas" class="bg-success">
+            <th scope="col" >{{person.codigo}}</th>
+            <th scope="col">{{person.nombre}}</th>
+            <th scope="col">{{person.creditos}}</th>
+          </tr>
+      </table>
+    </div>
+    

@@ -1,0 +1,107 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Agregar Materia</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Materias
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#/materia">Agregar Materia</a>
+                <a class="dropdown-item" href="#/principal">Materias Inscritas</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#/actividades" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Actividades
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#/actividades">Actividades</a>
+                <a class="dropdown-item" href="#/actividad">Agregar Actividad</a>
+              </div>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="#/principal">Horario</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0" (ngSubmit)="doLogout()">
+            <button ion-button class="btn btn-outline-success my-2 my-sm-0" type="submit">Cerrar Sesion</button>
+          </form>
+        </div>
+      </nav>
+
+      <form (ngSubmit)="agregar()">
+          <ion-item >
+              <ion-label>Materia</ion-label>
+              <ion-input type="text" [(ngModel)]="nombre.nom" name="nom"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Codigo</ion-label>
+              <ion-input type="text" [(ngModel)]="codigo.cod" name="cod"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Profesor</ion-label>
+              <ion-input type="text" [(ngModel)]="profesor.prof" name="prof"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>creditos</ion-label>
+              <ion-input type="number" [(ngModel)]="creditos.cred" name="cred"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Descripcion</ion-label>
+              <ion-textarea type="text" [(ngModel)]="descripcion.desc" name="desc"></ion-textarea>
+          </ion-item>
+          <ion-grid>
+              <ion-row>
+                <ion-col>
+                    <ion-item>
+                        <ion-label >Fecha de Inicio</ion-label>
+                        <ion-datetime displayFormat="MMMM/DD" ></ion-datetime>
+                      </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label >Fecha Final</ion-label>
+                        <ion-datetime displayFormat="MMMM/DD" ></ion-datetime>
+                      </ion-item>
+                </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>Hora</ion-label>
+                        <ion-datetime displayFormat="HH:mm"></ion-datetime>
+                      </ion-item>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-item>
+                          <ion-label>Fecha de Inicio</ion-label>
+                          <ion-datetime displayFormat="MMMM/DD"></ion-datetime>
+                        </ion-item>
+                  </ion-col>
+                  <ion-col>
+                      <ion-item>
+                          <ion-label>Fecha Final</ion-label>
+                          <ion-datetime displayFormat="MMMM/DD"></ion-datetime>
+                        </ion-item>
+                  </ion-col>
+                <ion-col>
+                    <ion-item>
+                        <ion-label>Hora</ion-label>
+                        <ion-datetime displayFormat="HH:mm"></ion-datetime>
+                      </ion-item>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+            <button ion-button class="btn btn-outline-success my-2 my-sm-0" type="submit">Agregar Materia</button>
+      </form>
+
+</ion-content>
