@@ -5,6 +5,7 @@
 from rest_framework import serializers
 from .models import Subject
 from .models import Activity
+from .models import Student
 
 
 class SubjectSerializer(serializers.ModelSerializer):
@@ -29,3 +30,12 @@ class ActivitySerializer(serializers.ModelSerializer):
             'value',
         )
         model = Activity
+
+class StudentSerializer(serializers.ModelSerializer):
+   class Meta:
+       fields = (
+                 'name',
+                 'correo',
+                 'password',
+                 )
+       model = Student

@@ -24,6 +24,14 @@ class Subject(models.Model):
     def __str__(self):
         return self.name
 
+class Student(models.Model):
+    correo = models.CharField(max_length=150)
+    name = models.CharField(max_length=100)
+    password = models.CharField(max_length=500, default='SOME STRING')
+    
+    def __str__(self):
+        return self.correo
+
 class Activity(models.Model):
     subject = models.ForeignKey(Subject, related_name='activities', on_delete = models.CASCADE)
     name = models.CharField(max_length=100)
