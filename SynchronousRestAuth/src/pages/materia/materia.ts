@@ -15,6 +15,14 @@ import { User } from '../../providers';
 })
 export class MateriaPage {
 
+    nombre:string = " ";
+    codigo:string = " ";
+    profesor:string = " ";
+    creditos:number = 0;
+    descripcion:string = " ";
+    starTime:string = " ";
+    endTime:string = " ";
+
   constructor(public navCtrl: NavController,public user: User, public navParams: NavParams) {
   
   }
@@ -27,7 +35,9 @@ export class MateriaPage {
     console.log('ionViewDidLoad MateriaPage');
   }
   agregar(){
+    console.log(this.codigo);
     this.navCtrl.push('PrincipalPage');
+
   }
   doLogout() {
     this.user.signup(this.account).subscribe((resp) => {

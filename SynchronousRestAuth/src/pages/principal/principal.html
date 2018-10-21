@@ -2,7 +2,7 @@
 </ion-header>
     
     
-    <ion-content >
+    <div>
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -40,9 +40,14 @@
           <tr>
             <th scope="col">Codigo</th>
             <th scope="col">Nombre</th>
-            <th scope="col">Horario</th>
+            <th scope="col">Creditos</th>
           </tr>
         </thead>
+        <tbody>
+          <tr>
+            <td *ngFor="let person of materiasInscritas">{{person.codigo}}</td>
+          </tr>
+        </tbody>
       </table>
-    </ion-content>
+    </div>
     

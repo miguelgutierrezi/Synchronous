@@ -39,26 +39,38 @@
       </nav>
 
       <form (ngSubmit)="agregar()">
-          <ion-item>
+          <ion-item >
               <ion-label>Materia</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [(ngModel)]="nombre.nom" name="nom"></ion-input>
           </ion-item>
-          <ion-item>
+          <ion-item >
               <ion-label>Codigo</ion-label>
-              <ion-input type="text"></ion-input>
+              <ion-input type="text" [(ngModel)]="codigo.cod" name="cod"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Profesor</ion-label>
+              <ion-input type="text" [(ngModel)]="profesor.prof" name="prof"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>creditos</ion-label>
+              <ion-input type="number" [(ngModel)]="creditos.cred" name="cred"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Descripcion</ion-label>
+              <ion-textarea type="text" [(ngModel)]="descripcion.desc" name="desc"></ion-textarea>
           </ion-item>
           <ion-grid>
               <ion-row>
                 <ion-col>
                     <ion-item>
-                        <ion-label>Fecha de Inicio</ion-label>
-                        <ion-datetime displayFormat="MMMM/DD"></ion-datetime>
+                        <ion-label >Fecha de Inicio</ion-label>
+                        <ion-datetime displayFormat="MMMM/DD" ></ion-datetime>
                       </ion-item>
                 </ion-col>
                 <ion-col>
                     <ion-item>
-                        <ion-label>Fecha Final</ion-label>
-                        <ion-datetime displayFormat="MMMM/DD"></ion-datetime>
+                        <ion-label >Fecha Final</ion-label>
+                        <ion-datetime displayFormat="MMMM/DD" ></ion-datetime>
                       </ion-item>
                 </ion-col>
                 <ion-col>
