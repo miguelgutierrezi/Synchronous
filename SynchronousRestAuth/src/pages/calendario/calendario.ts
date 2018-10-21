@@ -1,13 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the CalendarioPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
+import { LoadingController } from 'ionic-angular';
 @IonicPage()
 @Component({
   selector: 'page-calendario',
@@ -15,11 +9,20 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CalendarioPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+    public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CalendarioPage');
+    const loader = this.loadingCtrl.create({
+        content: "EN ESTOS MOMENTOS NO ESTA DISPONIBLE",
+        duration: 10000
+      });
+      this.navCtrl.push('PrincipalPage');
   }
+
+  
 
 }
