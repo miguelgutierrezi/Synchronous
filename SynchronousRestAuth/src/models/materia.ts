@@ -1,19 +1,19 @@
 export class Materia {
 
     nombre;
-    codigo;
-    profesor;
-    creditos;
     descripcion;
+    creditos;
+    nota;
+    profesor;
     starTime;
     endTime;
  
-    constructor(public nom, public cod, public prof, public cred, public des, public star, public end){
+    constructor(public nom, public des, public cred, public grade, public prof, public star, public end){
         this.nombre = nom;
-        this.codigo = cod;
-        this.profesor = prof;
-        this.creditos =cred;
         this.descripcion = des;
+        this.creditos =cred;
+        this.nota = grade;
+        this.profesor = prof;
         this.starTime = star;
         this.endTime = end;
     }

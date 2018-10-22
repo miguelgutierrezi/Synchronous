@@ -15,6 +15,9 @@ class SubjectSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'name',
+            'credits',
+            'teacher',
+            'grade',
             'description',
             'activities'
         )

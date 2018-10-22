@@ -38,26 +38,26 @@
         </div>
       </nav>
 
-      <form (ngSubmit)="agregar()">
+      <form (ngSubmit)="saveSubject()">
           <ion-item >
               <ion-label>Materia</ion-label>
-              <ion-input type="text" [(ngModel)]="nombre.nom" name="nom"></ion-input>
+              <ion-input type="text" [(ngModel)]="subject.name" name="name"></ion-input>
           </ion-item>
           <ion-item >
-              <ion-label>Codigo</ion-label>
-              <ion-input type="text" [(ngModel)]="codigo.cod" name="cod"></ion-input>
+              <ion-label>Creditos</ion-label>
+              <ion-input type="number" [(ngModel)]="subject.credits" name="credits"></ion-input>
           </ion-item>
           <ion-item >
               <ion-label>Profesor</ion-label>
-              <ion-input type="text" [(ngModel)]="profesor.prof" name="prof"></ion-input>
+              <ion-input type="text" [(ngModel)]="subject.teacher" name="teacher"></ion-input>
           </ion-item>
           <ion-item >
-              <ion-label>creditos</ion-label>
-              <ion-input type="number" [(ngModel)]="creditos.cred" name="cred"></ion-input>
+              <ion-label>Nota</ion-label>
+              <ion-input type="number" [(ngModel)]="subject.grade" name="grade"></ion-input>
           </ion-item>
           <ion-item >
               <ion-label>Descripcion</ion-label>
-              <ion-textarea type="text" [(ngModel)]="descripcion.desc" name="desc"></ion-textarea>
+              <ion-textarea type="text" [(ngModel)]="subject.description" name="description"></ion-textarea>
           </ion-item>
           <ion-grid>
               <ion-row>

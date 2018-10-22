@@ -1,0 +1,41 @@
+<!--
+  Generated template for the AddSubjectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>addSubject</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Añadir materia</h2>
+  <form (ngSubmit)="saveSubject()">
+    <ion-item>
+      <ion-label>Nombre</ion-label>
+      <ion-input type="text" [(ngModel)]="subject.name" name="name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Creditos</ion-label>
+      <ion-input type="number" [(ngModel)]="subject.credits" name="credits"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Profesor</ion-label>
+      <ion-input type="text" [(ngModel)]="subject.teacher" name="teacher"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Nota</ion-label>
+      <ion-input type="number" [(ngModel)]="subject.grade" name="grade"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Descripción</ion-label>
+      <ion-input type="text" [(ngModel)]="subject.description" name="description"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Guardar materia</button>
+  </form>
+</ion-content

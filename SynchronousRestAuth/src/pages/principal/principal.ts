@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../providers';
 import { LoadingController } from 'ionic-angular';
 import { Materia } from '../../models/materia';
+import { RestApiProvider } from '../../providers/rest-api/rest-api'
 
 /**
  * Generated class for the PrincipalPage page.
@@ -18,11 +19,12 @@ import { Materia } from '../../models/materia';
 })
 export class PrincipalPage {
 
-  public materiasInscritas = [];
+  public materias: Array<Object> = [];
 
-  constructor(public navCtrl: NavController,public user: User, public navParams: NavParams,public loadingCtrl: LoadingController) {
-    this.materiasInscritas.push(new Materia("Proweb",1232,"huyui",3,"ghjk","qwqa","axqw"));
+  constructor(public navCtrl: NavController,public user: User, public navParams: NavParams,public loadingCtrl: LoadingController, public restProvider: RestApiProvider) {
+    this.getSubjects();
   }
+  
   account: { email: string, password: string } = {
     email: 'test@example.com',
     password: 'test'
@@ -43,6 +45,19 @@ export class PrincipalPage {
         content: "EN ESTOS MOMENTOS NO ESTA DISPONIBLE",
         duration: 10000
       });
+  }
+
+  getSubjects() {
+    this.restProvider.getSubjects()
+    .then((data: Array<Object>) => {
+      this.materias = data;
+      console.log(data);
+    });
+  }
+
+  removeSubject(id) {
+    this.restProvider.removeSubject(id);
+    this.getSubjects();
   }
 
 }

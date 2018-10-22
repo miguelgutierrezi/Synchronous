@@ -12,7 +12,7 @@ from django.db import models
 
 
 class Subject(models.Model):
-    #student = models.ForeignKey(Student, on_delete = models.CASCADE)
+    # student = models.ForeignKey(Student, on_delete = models.CASCADE)
     name = models.CharField(max_length=100)
     description = models.TextField()
     credits = models.IntegerField(default=1)

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../providers';
+import { RestApiProvider } from '../../providers/rest-api/rest-api'
 /**
  * Generated class for the ActividadesPage page.
  *
@@ -15,7 +16,10 @@ import { User } from '../../providers';
 })
 export class ActividadesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,public user: User) {
+  public actividades: Array<Object> = [];
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public user: User, public restProvider: RestApiProvider) {
+    this.getActivities();
   }
 
   account: { email: string, password: string } = {
@@ -25,6 +29,14 @@ export class ActividadesPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActividadesPage');
+  }
+
+  getActivities() {
+    this.restProvider.getActivities()
+    .then((data: Array<Object>) => {
+      this.actividades = data;
+      console.log(data);
+    });
   }
 
   doLogout() {

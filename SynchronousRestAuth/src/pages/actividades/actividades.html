@@ -34,14 +34,22 @@
             </form>
           </div>
         </nav>
-      
-        <table class="table">
-          <thead class="thead-dark">
-            <tr>
-              <th scope="col">Actividad</th>
-              <th scope="col">Fecha</th>
-              <th scope="col">Hora</th>
+        
+        <p> Este es un pequeño parrafo {{ actividades }}</p>
+        <table class="table table-sm">
+            <tr class="table-secondary">
+                <th scope="col">Id</th>
+                <th scope="col">Actividad</th>
+                <th scope="col">Materia</th>
+                <th scope="col">Nota</th>
+                <th scope="col">Porcentaje</th>
             </tr>
-          </thead>
+            <tr *ngFor="let activity of actividades" class="bg-success">
+                <th scope="col">{{activity.id}}</th>
+                <th scope="col">{{activity.name}}</th>
+                <th scope="col">{{activity.subject}}</th>
+                <th scope="col">{{activity.grade}}</th>
+                <th scope="col">{{activity.value}}</th>
+            </tr>
         </table>
       </ion-content>

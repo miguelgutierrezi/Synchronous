@@ -36,16 +36,24 @@
       </nav>
     
       <table class="table table-sm">
-          <tr *ngFor="let person of materiasInscritas" class="table-secondary">
-            <th scope="col" >Codigo</th>
+          <tr class="table-secondary">
+            <th scope="col">Id</th>
             <th scope="col">Nombre</th>
             <th scope="col">Creditos</th>
+            <th scope="col">Profesor</th>
+            <th scope="col">Nota actual</th>
+            <th scope="col">Descripcion</th>
           </tr>
-          <tr *ngFor="let person of materiasInscritas" class="bg-success">
-            <th scope="col" >{{person.codigo}}</th>
-            <th scope="col">{{person.nombre}}</th>
-            <th scope="col">{{person.creditos}}</th>
+          <tr *ngFor="let subject of materias" class="bg-success">
+            <th scope="col">{{subject.id}}</th>
+            <th scope="col">{{subject.name}}</th>
+            <th scope="col">{{subject.credits}}</th>
+            <th scope="col">{{subject.teacher}}</th>
+            <th scope="col">{{subject.grade}}</th>
+            <th scope="col" >{{subject.description}}</th>
+            <th>
+            <button ion-button round (click)="removeSubject(subject.id)">Eliminar</button>
+            </th>
           </tr>
       </table>
     </div>
-    

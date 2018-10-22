@@ -4,5 +4,12 @@
     "cordova": {}
   },
   "type": "ionic-angular",
-  "pro_id": "072a8b7c"
+  "pro_id": "072a8b7c",
+
+  "proxies": [
+    {
+      "path": "api/subjects/",
+      "proxyUrl": "http://localhost:8000"
+    }
+  ]
 }
