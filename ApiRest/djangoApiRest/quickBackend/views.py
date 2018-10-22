@@ -22,6 +22,10 @@ class ActivityViewSet(viewsets.ModelViewSet):
 	serializer_class = ActivitySerializer
 	lookup_field = 'id'
 
+class ListStudent(generics.ListCreateAPIView):
+   queryset = Student.objects.all()
+   serializer_class = StudentSerializer
+
 class userStudent(generics.RetrieveUpdateDestroyAPIView):
    queryset = Student.objects.all()
    serializer_class = StudentSerializer
