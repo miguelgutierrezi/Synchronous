@@ -37,5 +37,4 @@ def prueba(request, mail):
 
 def deleteSubject(request,id_subject):
     materia = Subject.objects.get(id=id_subject)
-    if request=='GET':
-        materia.delete()
+    materia.delete()

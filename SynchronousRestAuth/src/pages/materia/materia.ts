@@ -39,6 +39,7 @@ export class MateriaPage {
   saveSubject() {
     this.restProvider.saveSubject(this.subject).subscribe((result) => {
       console.log(result);
+      this.navCtrl.push('PrincipalPage');
     }, (err) => {
       console.log(err);
     });
