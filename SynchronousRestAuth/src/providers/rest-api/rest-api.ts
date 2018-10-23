@@ -36,7 +36,11 @@ export class RestApiProvider {
   }
 
   removeSubject(id: string) {
-    return this.http.delete(this.apiUrl + '/api/subjects/' + id);
+    return this.http.delete('localhost:8000/api/delete/6');
+  }
+  deleteSubject(id){
+    console.log('ID->'+id);
+    this.http.get(this.apiUrl + 'api/delete/'+ id);
   }
 
   saveSubject(subject: any): Observable<any> {

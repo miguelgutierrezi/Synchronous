@@ -28,7 +28,7 @@ export class InfoMateriaPage {
   }
 
   borrarSubject(){
-    this.restProvider.removeSubject(this.objetoRecibido.nombre);
+    this.restProvider.deleteSubject(this.objetoRecibido.id);
     this.navCtrl.push('PrincipalPage');
   }
 

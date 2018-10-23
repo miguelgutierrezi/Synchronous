@@ -23,6 +23,7 @@ export class PrincipalPage {
   public materia:Object;
 
     parametros = {
+      id:0,
       nombre: "Hola",
       creditos:0,
       profesor:"",
@@ -64,7 +65,8 @@ export class PrincipalPage {
     });
   }
 
-  removeSubject(nombre:string,credito,profe,not,desc) {
+  removeSubject(nombre:string,credito,profe,not,desc,aux) {
+    this.parametros.id = aux;
     this.parametros.nombre = nombre;
     this.parametros.creditos = credito;
     this.parametros.profesor = profe;

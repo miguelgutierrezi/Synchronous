@@ -34,4 +34,8 @@ def prueba(request, mail):
     queryStudent = Student.objects.get(correo=mail)
     serializer = StudentSerializer(queryStudent)
     return JsonResponse(serializer.data, status=201)
-		
+
+def deleteSubject(request,id_subject):
+    materia = Subject.objects.get(id=id_subject)
+    if request=='GET':
+        materia.delete()
