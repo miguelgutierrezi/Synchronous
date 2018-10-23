@@ -42,6 +42,7 @@ export class MateriaPage {
       this.navCtrl.push('PrincipalPage');
     }, (err) => {
       console.log(err);
+      this.navCtrl.push('PrincipalPage');
     });
   }
   doLogout() {
