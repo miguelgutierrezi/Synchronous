@@ -1,9 +1,12 @@
 <ion-header>
+  <ion-navbar>
+    <ion-title>Informacion de la Materia</ion-title>
+  </ion-navbar>
 </ion-header>
-    
-    
-    <div>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+<ion-content padding>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
@@ -34,26 +37,30 @@
           </form>
         </div>
       </nav>
-    
-      <table class="table table-sm">
-          <tr class="table-secondary">
-            <th scope="col">Id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Creditos</th>
-            <th scope="col">Profesor</th>
-            <th scope="col">Nota actual</th>
-            <th scope="col">Descripcion</th>
-          </tr>
-          <tr *ngFor="let subject of materias" class="bg-success">
-            <th scope="col">{{subject.id}}</th>
-            <th scope="col">{{subject.name}}</th>
-            <th scope="col">{{subject.credits}}</th>
-            <th scope="col">{{subject.teacher}}</th>
-            <th scope="col">{{subject.grade}}</th>
-            <th scope="col" >{{subject.description}}</th>
-            <th>
-            <button ion-button round (click)="removeSubject(subject.name,subject.credits,subject.teacher,subject.grade,subject.description)">Ver Información</button>
-            </th>
-          </tr>
-      </table>
-    </div>
+
+      <form (ngSubmit)="borrarSubject()">
+          <ion-item >
+              <ion-label>Materia</ion-label>
+              <ion-input type="text" name="name" value="{{objetoRecibido.nombre}}"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Creditos</ion-label>
+              <ion-input type="number"  name="credits" value="{{objetoRecibido.creditos}}"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Profesor</ion-label>
+              <ion-input type="text" name="teacher" value="{{objetoRecibido.profesor}}"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Nota</ion-label>
+              <ion-input type="number"  name="grade" value="{{objetoRecibido.nota}}"></ion-input>
+          </ion-item>
+          <ion-item >
+              <ion-label>Descripcion</ion-label>
+              <ion-textarea type="text"  name="description" value="{{objetoRecibido.descripcion}}"></ion-textarea>
+          </ion-item>
+          <br>
+            <button ion-button class="btn btn-outline-success my-2 my-sm-0" type="submit">Borrar Materia</button>
+      </form>
+
+</ion-content>

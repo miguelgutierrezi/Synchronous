@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { User } from '../../providers';
 import { LoadingController } from 'ionic-angular';
 import { Materia } from '../../models/materia';
-import { RestApiProvider } from '../../providers/rest-api/rest-api'
+import { RestApiProvider } from '../../providers/rest-api/rest-api';
 
 /**
  * Generated class for the PrincipalPage page.
@@ -20,6 +20,15 @@ import { RestApiProvider } from '../../providers/rest-api/rest-api'
 export class PrincipalPage {
 
   public materias: Array<Object> = [];
+  public materia:Object;
+
+    parametros = {
+      nombre: "Hola",
+      creditos:0,
+      profesor:"",
+      nota:0,
+      descripcion:""
+    };
 
   constructor(public navCtrl: NavController,public user: User, public navParams: NavParams,public loadingCtrl: LoadingController, public restProvider: RestApiProvider) {
     this.getSubjects();
@@ -55,9 +64,14 @@ export class PrincipalPage {
     });
   }
 
-  removeSubject(id) {
-    this.restProvider.removeSubject(id);
-    this.getSubjects();
+  removeSubject(nombre:string,credito,profe,not,desc) {
+    this.parametros.nombre = nombre;
+    this.parametros.creditos = credito;
+    this.parametros.profesor = profe;
+    this.parametros.nota = not;
+    this.parametros.descripcion = desc;
+    this.navCtrl.push('InfoMateriaPage', this.parametros);
   }
+
 
 }

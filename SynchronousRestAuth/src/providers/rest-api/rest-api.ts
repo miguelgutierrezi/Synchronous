@@ -35,7 +35,7 @@ export class RestApiProvider {
     return this.http.get(this.apiUrl + '/api/subjects/' + id);
   }
 
-  removeSubject(id) {
+  removeSubject(id: string) {
     return this.http.delete(this.apiUrl + '/api/subjects/' + id);
   }
 
